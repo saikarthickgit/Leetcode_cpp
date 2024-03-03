@@ -1,0 +1,15 @@
+class Solution {
+public:
+    bool isPalindrome(string s) {
+        
+        string t1="";
+        for(auto x:s){
+            if(isalpha(x)||isdigit(x)){
+                t1+=tolower(x);
+            }
+        }
+        string t=t1;
+        reverse(t1.begin(),t1.end());
+        return t==t1?true:false;
+    }
+};
